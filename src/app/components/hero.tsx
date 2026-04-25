@@ -33,12 +33,12 @@ export default function Hero({ className = '' }: HeroProps){
                 LinkedIn
             </Link>
             <Link
-                href="https://www.instagram.com/_manan.sharma19/"
+                href="https://hackclub.enterprise.slack.com/team/U0807ADEC6L"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center border-2 border-[#201d15] bg-[#f4e9d2] px-3 py-2 text-xs uppercase tracking-[0.14em] text-[#201d15] transition hover:bg-[#ead9ba]"
             >
-                Instagram
+                HC Slack
             </Link>
             <Link
                 href="https://www.last.fm/user/sharmamanan190"
@@ -48,6 +48,7 @@ export default function Hero({ className = '' }: HeroProps){
             >
                 Last.fm
             </Link>
+            
         </nav>
         </div>
     </div>)}
