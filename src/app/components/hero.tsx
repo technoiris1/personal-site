@@ -1,6 +1,10 @@
-export default function Hero(){
+type HeroProps = {
+    className?: string
+}
+
+export default function Hero({ className = '' }: HeroProps){
     return(
-    <div className="bg-[#fffdf6] w-125 h-125 border-[3px] border-[#201d15] flex flex-col">
+    <div className={`bg-[#fffdf6] w-full h-full border-[3px] border-[#201d15] flex flex-col ${className}`}>
     <div className="pt-8 pl-8">
     <p className="hero-name text-5xl tracking-normal text-[#201d15]">Hi, I'm Manan.</p>
     </div>
