@@ -12,6 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@font-face {
+  font-family: 'Canela Condensed';
+  src: url('/fonts/CanelaCondensed-RegularItalic-Trial.otf') format('opentype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +31,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-name {
+  font-family: 'Canela Condensed', Arial, Helvetica, sans-serif;
 }
