@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel";
 
 type PhotographyProps = {
@@ -31,6 +34,26 @@ const pictures = [
 
 
 export default function Photography({ className = "" }: PhotographyProps) {
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (!selectedImage) {
+            return;
+        }
+
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setSelectedImage(null);
+            }
+        };
+
+        window.addEventListener("keydown", handleEscape);
+
+        return () => {
+            window.removeEventListener("keydown", handleEscape);
+        };
+    }, [selectedImage]);
+
     return (
         <div className={`flex h-full w-full flex-col border-[3px] border-[#201d15] bg-[#fffdf6] ${className}`}>
             <div className="pt-8 pl-8 pr-20">
@@ -48,8 +71,9 @@ export default function Photography({ className = "" }: PhotographyProps) {
                                             <img
                                                 src={item}
                                                 alt="picture"
-                                                className="h-full min-h-56 w-full object-cover"
+                                                className="h-full min-h-56 w-full cursor-pointer object-cover"
                                                 loading="lazy"
+                                                onClick={() => setSelectedImage(item)}
                                             />
                                         </div>
                                     </article>
@@ -64,6 +88,27 @@ export default function Photography({ className = "" }: PhotographyProps) {
                     </div>
                 </Carousel>
             </div>
+
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 px-4 py-8"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Expanded photo"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div
+                        className="relative max-h-full w-full max-w-5xl"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <img
+                            src={selectedImage}
+                            alt="Expanded picture"
+                            className="max-h-[85vh] w-full rounded-md object-contain"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
