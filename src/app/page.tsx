@@ -8,6 +8,7 @@ import Socials from "./components/socials";
 export default function Home() {
   return (
     <div className="bg-[#fffdf6] h-screen w-screen overflow-hidden p-4">
+
       <div className="flex h-full w-full gap-4 min-w-0">
         <div className="flex w-[42%] min-w-0 flex-col gap-4">
           <div className="flex-[0.9] min-h-0">
