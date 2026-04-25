@@ -32,11 +32,9 @@ export default function Blog({ className = "" }: BlogProps) {
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Blog</p>
             </div>
 
-            <div className="flex-1 min-h-0 pt-4 pb-6 pl-8 pr-8">
-                <Carousel className="h-full" opts={{ loop: true }}>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                    <CarouselContent className="h-full">
+            <div className="flex-[0.88] min-h-0 pt-4 pl-8 pr-8">
+                <Carousel className="flex flex-col h-full" opts={{ loop: true }}>
+                    <CarouselContent className="flex-1 min-h-0">
                         {posts.map((post) => (
                             <CarouselItem key={post.title} className="h-full">
                                 <article
@@ -65,17 +63,15 @@ export default function Blog({ className = "" }: BlogProps) {
                                         >
                                             {post.meta}
                                         </p>
-                                        <p
-                                            className="text-sm text-[#201d15]"
-                                            style={{ fontFamily: "var(--font-montserrat)", fontWeight: 600 }}
-                                        >
-                                            Embla carousel
-                                        </p>
                                     </div>
                                 </article>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
+                    <div className="flex items-center justify-between pt-4">
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </div>
                 </Carousel>
             </div>
         </div>

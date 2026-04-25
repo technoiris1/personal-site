@@ -167,7 +167,7 @@ export function CarouselPrevious({ className, onClick, ...props }: CarouselContr
         onClick?.(event);
       }}
       className={mergeClassNames(
-        "absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center border-[3px] border-[#201d15] bg-[#fffdf6] text-sm text-[#201d15] transition hover:-translate-y-[calc(50%+1px)] hover:bg-[#f3ead5] disabled:cursor-not-allowed disabled:opacity-40",
+        "flex h-10 w-10 items-center justify-center border-[3px] border-[#201d15] bg-[#fffdf6] text-sm text-[#201d15] transition hover:bg-[#f3ead5] disabled:cursor-not-allowed disabled:opacity-40",
         className,
       )}
       {...props}
@@ -190,7 +190,7 @@ export function CarouselNext({ className, onClick, ...props }: CarouselControlPr
         onClick?.(event);
       }}
       className={mergeClassNames(
-        "absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center border-[3px] border-[#201d15] bg-[#fffdf6] text-sm text-[#201d15] transition hover:-translate-y-[calc(50%+1px)] hover:bg-[#f3ead5] disabled:cursor-not-allowed disabled:opacity-40",
+        "flex h-10 w-10 items-center justify-center border-[3px] border-[#201d15] bg-[#fffdf6] text-sm text-[#201d15] transition hover:bg-[#f3ead5] disabled:cursor-not-allowed disabled:opacity-40",
         className,
       )}
       {...props}
