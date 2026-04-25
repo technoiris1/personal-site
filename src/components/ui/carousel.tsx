@@ -155,7 +155,7 @@ export function CarouselItem({
 type CarouselControlProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function CarouselPrevious({ className, onClick, ...props }: CarouselControlProps) {
-  const { scrollPrev, canScrollPrev } = useCarouselContext();
+  const { scrollPrev, canScrollPrev, orientation } = useCarouselContext();
 
   return (
     <button
@@ -172,13 +172,13 @@ export function CarouselPrevious({ className, onClick, ...props }: CarouselContr
       )}
       {...props}
     >
-      ←
+      {orientation === "vertical" ? "↑" : "←"}
     </button>
   );
 }
 
 export function CarouselNext({ className, onClick, ...props }: CarouselControlProps) {
-  const { scrollNext, canScrollNext } = useCarouselContext();
+  const { scrollNext, canScrollNext, orientation } = useCarouselContext();
 
   return (
     <button
@@ -195,7 +195,7 @@ export function CarouselNext({ className, onClick, ...props }: CarouselControlPr
       )}
       {...props}
     >
-      →
+      {orientation === "vertical" ? "↓" : "→"}
     </button>
   );
 }
