@@ -1,9 +1,9 @@
 import Hero from "./components/hero";
 import Projects from "./components/projects";
 import Music from "./components/music";
-import Photography from "./components/photography";
 import Hackathons from "./components/hackathons";
 import Blog from "./components/blog";
+import Photography from "./components/photography";
 import Socials from "./components/socials";
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
             <Hero />
           </div>
           <div className="flex-[1.2] min-h-0 w-full">
-            <Photography />
+            <Blog />
           </div>
         </div>
 
@@ -27,7 +27,7 @@ export default function Home() {
             <Music />
           </div>
           <div className="col-span-2 min-h-0">
-            <Blog />
+            <Photography />
           </div>
           <div className="min-h-0">
             <Socials />
