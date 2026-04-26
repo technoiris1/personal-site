@@ -6,6 +6,14 @@ type ProjectsProps = {
 };
 
 const projectCards = [
+        {
+        title: "Horizons Arcana",
+        description: "Horizons Arcana is a 48-hour long 100+ person high-school hackathon in Singapore from July 31st- August 2nd, 2026. It's a Hack Club hackathon which I'm organising with a team of some other amazing high-schoolers at Hack Club. It's completely free to attend and open to all high-schoolers around the world, travel stipends available!",
+        stack: "React, Supabase",
+        accent: "linear-gradient(180deg, #d8e3db 0%, #bccfbe 100%)",
+        repoUrl: "https://github.com/technoiris1/horizons-arcana",
+        liveUrl: "https://horizons-arcana.vercel.app/",
+    },
     {
         title: "Airborne",
         description: "Airborne is a Hack Club YSWS(You ship, We ship) under which you design any machine which can fly, and in return you get a grant to build it physically. I'll be running this as an Summer Inter at Hack Club this summer.",
@@ -14,14 +22,7 @@ const projectCards = [
         repoUrl: "https://github.com/technoiris1/airborne",
         liveUrl: "https://airborne.dino.icu/",
     },
-    {
-        title: "Horizons Arcana",
-        description: "Horizons Arcana is a 48-hour long 100+ person high-school hackathon in Singapore from July 31st- August 2nd, 2026. It's a Hack Club hackathon which I'm organising with a team of some other amazing high-schoolers at Hack Club. It's completely free to attend and open to all high-schoolers around the world, travel stipends available!",
-        stack: "React, Supabase",
-        accent: "linear-gradient(180deg, #d8e3db 0%, #bccfbe 100%)",
-        repoUrl: "https://github.com/technoiris1/horizons-arcana",
-        liveUrl: "https://horizons-arcana.vercel.app/",
-    },
+
     {
         title: "Mind Your Steps",
         description: "Mind your steps is a small game I made in godot at a hackathon. It's a 2D platformer made on top of a theme 'Beneath the Surface'. You play as a monkey in it who has to collect bananas, while collecting them you fall inside a valley and get stuck in an ancient temple. You have to solve a puzzle to get out of there.",

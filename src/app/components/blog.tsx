@@ -5,6 +5,12 @@ type BlogProps = {
 };
 
 const posts = [
+        {
+        title: "blogs in the big 26",
+        excerpt: "okokkokokokokokooookokookookookokoko",
+        meta: "idk smth",
+        tone: "linear-gradient(135deg, #ead8d1 0%, #c9b3aa 100%)",
+    },
     {
         title: "bro wrote a blog",
         excerpt: "okkokokokokokokoookokokokokokokok",
@@ -17,12 +23,7 @@ const posts = [
         meta: "idk smth",
         tone: "linear-gradient(135deg, #d7e1d9 0%, #b4c3b4 100%)",
     },
-    {
-        title: "blogs in the big 26",
-        excerpt: "okokkokokokokokooookokookookookokoko",
-        meta: "idk smth",
-        tone: "linear-gradient(135deg, #ead8d1 0%, #c9b3aa 100%)",
-    },
+
 ];
 
 export default function Blog({ className = "" }: BlogProps) {
