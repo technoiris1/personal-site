@@ -1,0 +1,15 @@
+Overglade was a 4-day long game jam in Singapore I attended, it was organised by Hack Club. It was probably the most life-changing experience I've ever had. I was there for nearly a week and so many things happened there at once that I don't even remember most of them in my immediate memory- but the moment someone who was there with me mentions some incident, everything is crystal clear in my mind as if it's deeply engraved on it.  
+
+It was from 29th Jan- 2nd Feb. I left my house early morning at 4am on 28th, then took a flight from my city Jaipur to Mumbai. I landed in Mumbai at around 10am and by 12pm I was out in the city, my flight to Singapore was at 11:35pm so I had to kill some time for my 12hr+ long layover. I roamed in the city for till 7pm and got back to the airport, there was one more dude who was going to fly with me so I just met him and then we went ahead with the security, immigration etc.
+
+
+The actual thing started when I reached my gate, I was supposed to board Singapore Airlines flight SQ423 which is operated by an Airbus A380, which is the biggest passenger plane ever made. This was my first time seeing this giant and it was HUGE, literally a high-rise building flying in the sky. I didn't realise the sheer scale of this machine until I noticed the people and cars near it which were looking like lego pieces.   
+
+<img src="https://cdn.hackclub.com/019dc5d9-7ef4-7e2c-ba01-b398c7d29f19/WhatsApp%20Image%202026-04-25%20at%2023.34.30.jpeg" width={400} />  
+
+I boarded my plane, it took off and yeah I was out for Singapore. I ate the food and everything like any other flight, it was a medium haul 5.5hr long flight so I slept for a bit. 
+Then I woke up an hour before landing and I was in a totally different world, it was ocean everywhere. Then after a while we started our descent for Singapore and I could see the island, the skyline and hundreds of vessels in the water. It was an amazing sight.  
+
+<img src="https://user-cdn.hackclub-assets.com/019dc5d7-3aba-7d1a-913c-99f001a383f4/WhatsApp%20Image%202026-04-25%20at%2023.34.21%20(1).jpeg" width={400} />.  
+
+Then we landed and in about an hour I was out in the city. I spent that roaming around the city with my friends saw some beautiful buildings.

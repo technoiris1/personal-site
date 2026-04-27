@@ -1,80 +1,93 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel";
+import path from "node:path";
+import { readFile } from "node:fs/promises";
+import { serialize } from "next-mdx-remote/serialize";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+import BlogClient from "./blog-client";
 
 type BlogProps = {
     className?: string;
 };
 
-const posts = [
-        {
-        title: "blogs in the big 26",
-        excerpt: "okokkokokokokokooookokookookookokoko",
+type Post = {
+    title: string;
+    excerpt?: string;
+    meta: string;
+    tone: string;
+    path: string;
+};
+
+const posts: Post[] = [
+    {
+        title: "Overglade: A Game Jam in Singapore",
+        excerpt: "",
         meta: "idk smth",
         tone: "linear-gradient(135deg, #ead8d1 0%, #c9b3aa 100%)",
+        path: "/blogs/overglade.md",
     },
-    {
-        title: "bro wrote a blog",
-        excerpt: "okkokokokokokokoookokokokokokokok",
-        meta: "idk smth",
-        tone: "linear-gradient(135deg, #f4e0c4 0%, #d8c1a0 100%)",
-    },
-    {
-        title: "grown ahh mfs be writing blogs",
-        excerpt: "okokokookokokokokokokokokokokokokokokokokok",
-        meta: "idk smth",
-        tone: "linear-gradient(135deg, #d7e1d9 0%, #b4c3b4 100%)",
-    },
-
 ];
 
-export default function Blog({ className = "" }: BlogProps) {
-    return (
-        <div className={`flex h-full w-full flex-col border-[3px] border-[#201d15] bg-[#fffdf6] ${className}`}>
-            <div className="pt-8 pl-8 pr-20">
-                <p className="hero-name text-5xl tracking-normal text-[#201d15]">Blog</p>
-            </div>
+type HydratedPost = Post & {
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>;
+    computedExcerpt: string;
+};
 
-            <div className="flex-[0.88] min-h-0 pt-4 pl-8 pr-8">
-                <Carousel className="flex flex-col h-full" opts={{ loop: true }}>
-                    <CarouselContent className="flex-1 min-h-0">
-                        {posts.map((post) => (
-                            <CarouselItem key={post.title} className="h-full">
-                                <article
-                                    className="flex h-full flex-col justify-between border-[3px] border-[#201d15] p-8"
-                                    style={{ backgroundImage: post.tone }}
-                                >
-                                    <div className="space-y-5">
-                                        <p
-                                            className="text-3xl font-semibold text-[#201d15]"
-                                            style={{ fontFamily: "var(--font-montserrat)" }}
-                                        >
-                                            {post.title}
-                                        </p>
-                                        <p
-                                            className="max-w-sm text-base leading-7 text-[#201d15]"
-                                            style={{ fontFamily: "var(--font-montserrat)", fontWeight: 550 }}
-                                        >
-                                            {post.excerpt}
-                                        </p>
-                                    </div>
+function normalizePublicPath(inputPath: string) {
+    const normalized = inputPath.startsWith("/") ? inputPath.slice(1) : inputPath;
 
-                                    <div className="flex items-center justify-between gap-4">
-                                        <p
-                                            className="text-xs uppercase tracking-[0.35em] text-[#201d15]"
-                                            style={{ fontFamily: "var(--font-montserrat)", fontWeight: 600 }}
-                                        >
-                                            {post.meta}
-                                        </p>
-                                    </div>
-                                </article>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <div className="flex items-center justify-between pt-4">
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </div>
-                </Carousel>
-            </div>
-        </div>
+    if (normalized.startsWith("blog/")) {
+        return normalized.replace(/^blog\//, "blogs/");
+    }
+
+    return normalized;
+}
+
+function stripMarkdown(markdown: string) {
+    return markdown
+        .replace(/```[\s\S]*?```/g, " ")
+        .replace(/`([^`]*)`/g, "$1")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+        .replace(/^\s{0,3}#{1,6}\s+/gm, "")
+        .replace(/^\s{0,3}>\s?/gm, "")
+        .replace(/^\s*[-*+]\s+/gm, "")
+        .replace(/^\s*\d+\.\s+/gm, "")
+        .replace(/[*_~]/g, "")
+        .replace(/\n+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function makeExcerpt(markdown: string, fallback = "") {
+    const plain = stripMarkdown(markdown);
+
+    if (!plain) {
+        return fallback;
+    }
+
+    if (plain.length <= 180) {
+        return plain;
+    }
+
+    return `${plain.slice(0, 180).trimEnd()}...`;
+}
+
+export default async function Blog({ className = "" }: BlogProps) {
+    const hydratedPosts: HydratedPost[] = await Promise.all(
+        posts.map(async (post) => {
+            const publicPath = normalizePublicPath(post.path);
+            const fullPath = path.join(process.cwd(), "public", publicPath);
+            const content = await readFile(fullPath, "utf8");
+            const mdxSource = await serialize(content);
+
+            return {
+                ...post,
+                path: `/${publicPath}`,
+                mdxSource,
+                computedExcerpt: makeExcerpt(content, post.excerpt),
+            };
+        }),
     );
+
+    return <BlogClient className={className} posts={hydratedPosts} />;
 }

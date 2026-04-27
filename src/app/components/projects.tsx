@@ -16,7 +16,7 @@ const projectCards = [
     },
     {
         title: "Airborne",
-        description: "Airborne is a Hack Club YSWS(You ship, We ship) under which you design any machine which can fly, and in return you get a grant to build it physically. I'll be running this as an Summer Inter at Hack Club this summer.",
+        description: "Airborne is a Hack Club YSWS(You ship, We ship) under which you design any machine which can fly, and in return you get a grant to build it physically. I'll be running this as an Summer Intern at Hack Club this summer.",
         stack: "Next.js, TypeScript, Tailwind",
         accent: "linear-gradient(180deg, #f1e4cf 0%, #e2cfaf 100%)",
         repoUrl: "https://github.com/technoiris1/airborne",
