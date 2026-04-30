@@ -69,7 +69,7 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                                                 {post.title}
                                             </p>
                                             <p
-                                                className="max-w-sm text-base leading-7 text-[#201d15]"
+                                                className="text-base leading-7 text-[#201d15]"
                                                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 550 }}
                                             >
                                                 {post.computedExcerpt}
@@ -77,12 +77,7 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                                         </div>
 
                                         <div className="flex items-center justify-between gap-4">
-                                            <p
-                                                className="text-xs uppercase tracking-[0.35em] text-[#201d15]"
-                                                style={{ fontFamily: "var(--font-montserrat)", fontWeight: 600 }}
-                                            >
-                                                {post.meta}
-                                            </p>
+
                                         </div>
                                     </article>
                                 </button>
