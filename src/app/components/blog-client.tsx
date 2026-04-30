@@ -41,12 +41,12 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
     }, [selectedPost]);
 
     return (
-        <div className={`flex h-full w-full flex-col border-[3px] border-[#201d15] bg-[#fffdf6] ${className}`}>
-            <div className="pt-8 pl-8 pr-20">
+        <div className={`flex pb-0 h-full w-full flex-col border-[3px] border-[#201d15] ${className}`}>
+            <div className="pt-8 pl-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Blog</p>
             </div>
 
-            <div className="flex-[0.88] min-h-0 pt-4 pl-8 pr-8 pb-6">
+            <div className="flex-[0.95] min-h-0 pt-4 pl-8 pr-8 pb-0">
                 <Carousel className="flex h-full flex-col" opts={{ loop: true }}>
                     <CarouselContent className="flex-1 min-h-0">
                         {posts.map((post) => (
@@ -95,7 +95,6 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                     </div>
                 </Carousel>
             </div>
-
             {selectedPost && (
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-[#1b1710]/85 px-4 py-8 backdrop-blur-[2px]"
