@@ -65,13 +65,13 @@ export default function Photography({ className = "" }: PhotographyProps) {
                     <div className="min-h-0 flex-1">
                         <CarouselContent className="h-full">
                             {pictures.map((item) => (
-                                <CarouselItem className="h-full basis-[82%] sm:basis-[58%] lg:basis-[42%] xl:basis-[36%]">
+                                <CarouselItem className="h-full basis-[82%] sm:basis-[58%] md:basis-[45%] lg:basis-[38%] xl:basis-[30%]">
                                     <article className="flex h-full flex-col border-[3px] border-[#201d15] bg-[#f7f1e4]">
-                                        <div className="min-h-0 flex-1 border-b-[3px] border-[#201d15]">
+                                        <div className="min-h-0 flex-1">
                                             <img
                                                 src={item}
                                                 alt="picture"
-                                                className="h-full min-h-56 w-full cursor-pointer object-cover"
+                                                className="h-full min-h-40 sm:min-h-56 md:min-h-44 lg:min-h-40 xl:min-h-36 w-full cursor-pointer object-cover"
                                                 loading="lazy"
                                                 onClick={() => setSelectedImage(item)}
                                             />
