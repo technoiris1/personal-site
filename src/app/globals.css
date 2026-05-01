@@ -41,20 +41,20 @@ body {
   .project-description-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-    line-clamp: 8;
+    -webkit-line-clamp: 11;
+    line-clamp: 11;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 0.85rem;
-    line-height: 1.25rem;
-    max-height: calc(1.25rem * 8);
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    max-height: calc(1.4rem * 11);
   }
 }
 
 @media (max-width: 360px) {
   .project-description-clamp {
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    max-height: calc(1.25rem * 5);
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+    max-height: calc(1.4rem * 8);
   }
 }
