@@ -36,3 +36,12 @@ body {
 .hero-name {
   font-family: 'Canela Condensed', Arial, Helvetica, sans-serif;
 }
+
+@media (max-width: 767px) {
+  .project-description-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+}
