@@ -43,7 +43,9 @@ const projectCards = [
 
 export default function Projects({ className = "" }: ProjectsProps) {
     return (
-        <div className={`bg-[#fffdf6] w-full h-full border-[3px] border-[#201d15] flex flex-col ${className}`}>
+        <div
+            className={`bg-[#fffdf6] w-full h-[min(70vh,32rem)] sm:h-[min(70vh,34rem)] lg:h-full border-[3px] border-[#201d15] flex flex-col ${className}`}
+        >
             <div className="pt-8 pl-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Projects</p>
             </div>
@@ -55,7 +57,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
                 >
                     <CarouselContent className="h-full">
                         {projectCards.map((project) => (
-                            <CarouselItem key={project.title} className="basis-[46%]">
+                            <CarouselItem key={project.title} className="basis-full lg:basis-[46%]">
                                 <article
                                     className="h-full border-[3px] border-[#201d15] px-5 py-4 flex flex-col justify-between"
                                     style={{ backgroundImage: project.accent }}
