@@ -41,8 +41,8 @@ body {
   .project-description-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-    line-clamp: 8;
+    -webkit-line-clamp: 12;
+    line-clamp: 12;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.85rem;
