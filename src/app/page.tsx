@@ -24,7 +24,7 @@ export default function Home() {
           <div className="min-h-0">
             <Hackathons />
           </div>
-          <div className="col-span-1 lg:col-span-2 lg:row-span-2 min-h-0">
+          <div className="col-span-1 lg:col-span-2 lg:row-span-2 min-h-0 mb-4 lg:mb-0">
             <Photography />
           </div>
         </div>
