@@ -37,11 +37,24 @@ body {
   font-family: 'Canela Condensed', Arial, Helvetica, sans-serif;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 479px) {
   .project-description-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
     overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    max-height: calc(1.25rem * 8);
+  }
+}
+
+@media (max-width: 360px) {
+  .project-description-clamp {
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    max-height: calc(1.25rem * 6);
   }
 }

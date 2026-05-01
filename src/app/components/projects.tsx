@@ -9,7 +9,6 @@ const projectCards = [
         {
         title: "Horizons Arcana",
         description: "Horizons Arcana is a 48-hour long 100+ person high-school hackathon in Singapore from July 31st- August 2nd, 2026. It's a Hack Club hackathon which I'm organising with a team of some other amazing high-schoolers at Hack Club. It's completely free to attend and open to all high-schoolers around the world, travel stipends available!",
-        stack: "React, Supabase",
         accent: "linear-gradient(180deg, #d8e3db 0%, #bccfbe 100%)",
         repoUrl: "https://github.com/technoiris1/horizons-arcana",
         liveUrl: "https://horizons-arcana.vercel.app/",
@@ -17,7 +16,6 @@ const projectCards = [
     {
         title: "Airborne",
         description: "Airborne is a Hack Club YSWS(You ship, We ship) under which you design any machine which can fly, and in return you get a grant to build it physically. I'll be running this as an Summer Intern at Hack Club this summer.",
-        stack: "Next.js, TypeScript, Tailwind",
         accent: "linear-gradient(180deg, #f1e4cf 0%, #e2cfaf 100%)",
         repoUrl: "https://github.com/technoiris1/airborne",
         liveUrl: "https://airborne.dino.icu/",
@@ -26,7 +24,6 @@ const projectCards = [
     {
         title: "Mind Your Steps",
         description: "Mind your steps is a small game I made in godot at a hackathon. It's a 2D platformer made on top of a theme 'Beneath the Surface'. You play as a monkey in it who has to collect bananas, while collecting them you fall inside a valley and get stuck in an ancient temple. You have to solve a puzzle to get out of there.",
-        stack: "Next.js, Mapbox",
         accent: "linear-gradient(180deg, #ebddd6 0%, #d8bfb3 100%)",
         repoUrl: "https://github.com/technoiris1/mind-your-steps",
         liveUrl: "https://manan-coder.itch.io/mind-your-steps",
@@ -34,7 +31,6 @@ const projectCards = [
     {
         title: "nomad",
         description: "nomad is a foldable 3D printer which folds and turns into a suitcase. It is a cartesian bed-slinger print which has a build volume of 220*220*250mm.",
-        stack: "TypeScript, Node",
         accent: "linear-gradient(180deg, #ece8cf 0%, #d7ce9f 100%)",
         repoUrl: "https://github.com/technoiris1/nomad",
         liveUrl: "https://github.com/technoiris1/nomad/blob/main/JOURNAL.md",
@@ -83,7 +79,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-disabled={!project.repoUrl}
-                                            className={`flex items-center justify-center border-2 border-[#201d15] px-3 py-2 text-[0.65rem] uppercase tracking-[0.14em] transition ${
+                                            className={`flex items-center justify-center border-2 border-[#201d15] px-3 py-2 text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.12em] sm:tracking-[0.14em] leading-none whitespace-nowrap transition ${
                                                 project.repoUrl ? "bg-[#f4e9d2] text-[#201d15] hover:bg-[#ead9ba]" : "pointer-events-none bg-[#e9ddc5] text-[#6f6250] opacity-60"
                                             }`}
                                             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 600 }}
@@ -95,7 +91,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-disabled={!project.liveUrl}
-                                            className={`flex items-center justify-center border-2 border-[#201d15] px-3 py-2 text-[0.65rem] uppercase tracking-[0.14em] transition ${
+                                            className={`flex items-center justify-center border-2 border-[#201d15] px-3 py-2 text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.12em] sm:tracking-[0.14em] leading-none whitespace-nowrap transition ${
                                                 project.liveUrl ? "bg-[#f4e9d2] text-[#201d15] hover:bg-[#ead9ba]" : "pointer-events-none bg-[#e9ddc5] text-[#6f6250] opacity-60"
                                             }`}
                                             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 600 }}
