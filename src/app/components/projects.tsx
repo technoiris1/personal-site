@@ -45,7 +45,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
             <div className="pt-8 pl-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Projects</p>
             </div>
-            <div className="flex-1 min-h-0 pt-4 pl-8 pr-8 pb-6">
+            <div className="flex-1 min-h-0 pt-4 pl-8 pr-8 pb-6 lg:pt-3 lg:pb-3">
                 <Carousel
                     className="h-full"
                     orientation="vertical"
@@ -53,27 +53,27 @@ export default function Projects({ className = "" }: ProjectsProps) {
                 >
                     <CarouselContent className="h-full">
                         {projectCards.map((project) => (
-                            <CarouselItem key={project.title} className="basis-full lg:basis-[46%]">
+                            <CarouselItem key={project.title} className="basis-full lg:min-h-0">
                                 <article
-                                    className="h-full border-[3px] border-[#201d15] px-5 py-4 md:px-7 md:py-5 flex flex-col justify-between"
+                                    className="h-full border-[3px] border-[#201d15] px-5 py-4 md:px-7 md:py-5 lg:py-4 flex flex-col justify-between lg:overflow-hidden"
                                     style={{ backgroundImage: project.accent }}
                                 >
                                     <div className="space-y-2 md:space-y-3">
                                         <p
-                                            className="text-[1.35rem] leading-tight md:text-[1.6rem] md:leading-tight text-[#201d15]"
+                                            className="text-[1.35rem] leading-tight md:text-[1.6rem] md:leading-tight lg:text-[1.5rem] lg:leading-snug text-[#201d15]"
                                             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 700 }}
                                         >
                                             {project.title}
                                         </p>
                                         <p
-                                            className="project-description-clamp text-sm leading-6 md:text-base md:leading-7 text-[#201d15]"
+                                            className="project-description-clamp text-sm leading-6 md:text-base md:leading-7 lg:text-[0.95rem] lg:leading-6 text-[#201d15]"
                                             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 550 }}
                                         >
                                             {project.description}
                                         </p>
                                     </div>
 
-                                    <div className="mt-4 md:mt-5 grid grid-cols-2 gap-2 md:gap-3">
+                                    <div className="mt-4 md:mt-5 lg:mt-3 grid grid-cols-2 gap-2 md:gap-3 shrink-0">
                                         <Link
                                             href={project.repoUrl || "#"}
                                             target="_blank"

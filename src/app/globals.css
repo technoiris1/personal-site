@@ -58,3 +58,31 @@ body {
     max-height: calc(1.4rem * 8);
   }
 }
+
+@media (min-width: 1024px) {
+  .project-description-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+    line-clamp: 9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: calc(1.5rem * 9);
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-description-clamp {
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    max-height: calc(1.5rem * 10);
+  }
+}
+
+@media (min-width: 1536px) {
+  .project-description-clamp {
+    -webkit-line-clamp: 11;
+    line-clamp: 11;
+    max-height: calc(1.5rem * 11);
+  }
+}
