@@ -63,7 +63,7 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                                     >
                                         <div className="space-y-5">
                                             <p
-                                                className="text-3xl font-semibold text-[#201d15] lg:-mt-4"
+                                                className="text-3xl font-semibold text-[#201d15] lg:-mt-4 xl:mt-2"
                                                 style={{ fontFamily: "var(--font-montserrat)" }}
                                             >
                                                 {post.title}
