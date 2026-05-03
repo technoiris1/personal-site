@@ -16,7 +16,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid flex-1 min-w-0 grid-cols-1 lg:grid-cols-2 lg:grid-rows-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-4">
+        <div className="grid flex-1 min-w-0 grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
           <div className="min-h-0 col-span-1 lg:col-span-2">
             <Projects />
           </div>

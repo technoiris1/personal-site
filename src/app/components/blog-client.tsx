@@ -42,7 +42,7 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
 
     return (
         <div className={`flex pb-0 h-full w-full flex-col border-[3px] border-[#201d15] ${className}`}>
-            <div className="pt-8 lg:pt-3 pl-8">
+            <div className="pt-8 lg:pt-3 pl-8 xl:pt-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Blog</p>
             </div>
 

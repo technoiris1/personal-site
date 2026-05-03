@@ -56,7 +56,7 @@ export default function Photography({ className = "" }: PhotographyProps) {
 
     return (
         <div className={`flex h-full w-full flex-col border-[3px] border-[#201d15] bg-[#fffdf6] ${className}`}>
-            <div className="pt-8 lg:pt-3 pl-8 pr-20">
+            <div className="pt-8 lg:pt-3 pl-8 pr-20 xl:pt-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Random Clicks</p>
             </div>
 
