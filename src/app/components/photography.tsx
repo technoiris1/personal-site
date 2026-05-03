@@ -82,10 +82,8 @@ export default function Photography({ className = "" }: PhotographyProps) {
                         </CarouselContent>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between">
-                        <CarouselPrevious className="static" />
-                        <CarouselNext className="static" />
-                    </div>
+                    <CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2" />
+                    <CarouselNext className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2" />
                 </Carousel>
             </div>
 

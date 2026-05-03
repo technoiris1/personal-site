@@ -84,10 +84,8 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="flex items-center justify-between pt-4">
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </div>
+                    <CarouselPrevious className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2" />
+                    <CarouselNext className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2" />
                 </Carousel>
             </div>
             {selectedPost && (
