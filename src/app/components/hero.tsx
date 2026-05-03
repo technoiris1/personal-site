@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Hero({ className = '' }: HeroProps){
     return(
     <div className={`bg-[#fffdf6] w-full h-full flex flex-col ${className} border-[3px] border-[#201d15]`}>
-    <div className="pt-4 pl-4 sm:pt-6 sm:pl-6 lg:pt-4 lg:pl-8 xl:pt-8">
+    <div className="pt-4 pl-4 sm:pt-6 sm:pl-6 lg:pt-4 lg:pl-8 2xl:pt-8 xl:pt-3">
     <p className="hero-name text-7xl sm:text-6xl lg:text-6xl 2xl:text-7xl leading-[0.95] tracking-normal text-[#201d15]">Hi, I'm Manan.</p>
     </div>
     <div className="flex-1 pt-3 pl-4 pr-4 sm:pt-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">

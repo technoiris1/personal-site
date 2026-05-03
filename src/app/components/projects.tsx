@@ -42,7 +42,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
         <div
             className={`bg-[#fffdf6] w-full h-[min(70vh,32rem)] sm:h-[min(70vh,34rem)] lg:h-full border-[3px] border-[#201d15] flex flex-col ${className}`}
         >
-            <div className="pt-8 lg:pt-3 pl-8 xl:pt-8">
+            <div className="pt-8 xl:pt-3 pl-8 2xl:pt-8">
                 <p className="hero-name text-5xl tracking-normal text-[#201d15]">Projects</p>
             </div>
             <div className="flex-1 min-h-0 pt-4 pl-8 pr-8 pb-6 lg:pt-3 lg:pb-3">
