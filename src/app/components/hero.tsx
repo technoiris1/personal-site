@@ -9,8 +9,6 @@ export default function Hero({ className = '' }: HeroProps){
     <p className="hero-name text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl leading-[0.95] tracking-normal text-[#201d15]">Hi, I'm Manan.</p>
     </div>
     <div className="flex-1 pt-3 pl-4 pr-4 sm:pt-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">
-        <p className="text-sm sm:text-base lg:text-lg text-[#201d15] leading-snug" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: '550' }}>I'm 16 and I like machines. I have been into tech for the past 6 years. <br />
-        I'm also a member of Hack Club, Hack Club is an amazing community of high school hackers- read more about it <Link href="https://hackclub.com"  target="_blank" rel="noopener noreferrer" className="underline">here</Link>. </p>
         <nav
             aria-label="Social links"
             className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
