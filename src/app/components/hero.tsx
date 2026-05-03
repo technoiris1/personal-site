@@ -11,7 +11,7 @@ export default function Hero({ className = '' }: HeroProps){
     <div className="flex-1 pt-3 pl-4 pr-4 sm:pt-4 sm:pl-6 sm:pr-6 lg:pl-8 lg:pr-8">
         <nav
             aria-label="Social links"
-            className="mt-4 lg:mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4"
+            className="mt-4 lg:mt-2 xl:mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
             style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 600 }}
         >
             <Link
