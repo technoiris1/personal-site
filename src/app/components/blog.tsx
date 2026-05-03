@@ -18,9 +18,9 @@ type Post = {
 
 const posts: Post[] = [
     {
-        title: "Overglade: A Game Jam in Singapore",
-        excerpt: "",
-        meta: "idk smth",
+        title: "Overglade",
+        excerpt: "Overglade was a 4-day long game jam in Singapore by Hack Club. It was one of most life changing experiences I've had. I met a lot of new amazing people and genuinely changed a lot as a person in that one week........ ",
+        meta: "",
         tone: "linear-gradient(135deg, #ead8d1 0%, #c9b3aa 100%)",
         path: "/blogs/overglade.md",
     },

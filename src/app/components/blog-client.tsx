@@ -72,7 +72,7 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                                                 className="text-base leading-7 text-[#201d15]"
                                                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 550 }}
                                             >
-                                                {post.computedExcerpt}
+                                                {post.excerpt?.trim() ? post.excerpt : post.computedExcerpt}
                                             </p>
                                         </div>
 
