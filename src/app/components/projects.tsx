@@ -156,10 +156,14 @@ export default function Projects({ className = "" }: ProjectsProps) {
                     onClick={() => setSelectedProject(null)}
                 >
                     <div
-                        className="relative max-h-full w-full max-w-3xl overflow-y-auto border-[3px] border-[#201d15] bg-[linear-gradient(180deg,#fffdf6_0%,#f8efde_100%)] p-0 shadow-[10px_10px_0px_0px_#201d15]"
+                        className="relative max-h-full w-full max-w-3xl overflow-y-auto border-[3px] border-[#201d15] p-0 shadow-[10px_10px_0px_0px_#201d15]"
+                        style={{ backgroundImage: selectedProject.accent }}
                         onClick={(event) => event.stopPropagation()}
                     >
-                        <div className="sticky top-0 z-10 mb-6 flex w-full items-start justify-between gap-4 border-b-[3px] border-[#201d15] bg-[#f2e3c8] px-6 py-5 sm:px-10">
+                        <div
+                            className="sticky top-0 z-10 mb-6 flex w-full items-start justify-between gap-4 border-b-[3px] border-[#201d15] px-6 py-5 sm:px-10"
+                            style={{ backgroundImage: selectedProject.accent }}
+                        >
                             <div>
                                 <p
                                     className="text-3xl font-semibold text-[#201d15]"
@@ -182,7 +186,7 @@ export default function Projects({ className = "" }: ProjectsProps) {
                             className="px-6 pb-8 sm:px-10"
                             style={{ fontFamily: "var(--font-montserrat)", color: "#201d15" }}
                         >
-                            <p className="mb-6 text-[1.02rem] leading-8 text-[#2f2618]">
+                            <p className="mb-6 text-[1.12rem] font-medium leading-8 text-[#2f2618]">
                                 {selectedProject.description}
                             </p>
                             <div className="grid grid-cols-2 gap-2 md:gap-3">
@@ -222,3 +226,8 @@ export default function Projects({ className = "" }: ProjectsProps) {
         </div>
     );
 }
+
+
+
+
+
