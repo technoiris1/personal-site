@@ -97,10 +97,14 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                     onClick={() => setSelectedPost(null)}
                 >
                     <div
-                        className="relative max-h-full w-full max-w-4xl overflow-y-auto border-[3px] border-[#201d15] bg-[linear-gradient(180deg,#fffdf6_0%,#f8efde_100%)] p-0 shadow-[10px_10px_0px_0px_#201d15]"
+                        className="relative max-h-full w-full max-w-4xl overflow-y-auto border-[3px] border-[#201d15] p-0 shadow-[10px_10px_0px_0px_#201d15]"
+                        style={{ backgroundImage: selectedPost.tone }}
                         onClick={(event) => event.stopPropagation()}
                     >
-                        <div className="sticky top-0 z-10 mb-6 flex w-full items-start justify-between gap-4 border-b-[3px] border-[#201d15] bg-[#f2e3c8] px-6 py-5 sm:px-10">
+                        <div
+                            className="sticky top-0 z-10 mb-6 flex w-full items-start justify-between gap-4 border-b-[3px] border-[#201d15] px-6 py-5 sm:px-10"
+                            style={{ backgroundImage: selectedPost.tone }}
+                        >
                             <div>
                                 <p
                                     className="text-3xl font-semibold text-[#201d15]"
@@ -133,13 +137,17 @@ export default function BlogClient({ className = "", posts }: BlogClientProps) {
                                         <h3 className="mb-2 mt-6 text-2xl font-semibold leading-snug text-[#2a2115]">{children}</h3>
                                     ),
                                     p: ({ children }) => (
-                                        <p className="mb-4 text-[1.02rem] leading-8 text-[#2f2618]">{children}</p>
+                                        <p className="mb-4 text-[1.12rem] font-medium leading-8 text-[#2f2618]">{children}</p>
                                     ),
                                     ul: ({ children }) => (
-                                        <ul className="mb-5 list-disc space-y-2 pl-6 text-[1.02rem] leading-8 text-[#2f2618]">{children}</ul>
+                                        <ul className="mb-5 list-disc space-y-2 pl-6 text-[1.12rem] font-medium leading-8 text-[#2f2618]">
+                                            {children}
+                                        </ul>
                                     ),
                                     ol: ({ children }) => (
-                                        <ol className="mb-5 list-decimal space-y-2 pl-6 text-[1.02rem] leading-8 text-[#2f2618]">{children}</ol>
+                                        <ol className="mb-5 list-decimal space-y-2 pl-6 text-[1.12rem] font-medium leading-8 text-[#2f2618]">
+                                            {children}
+                                        </ol>
                                     ),
                                     blockquote: ({ children }) => (
                                         <blockquote className="my-6 border-l-4 border-[#201d15] bg-[#f4e8d3] px-4 py-3 italic text-[#3f3424]">
