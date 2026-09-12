@@ -40,55 +40,40 @@ body {
   padding: clamp(0.75rem, 3vw, 2.5rem);
   display: grid;
   place-items: center;
-  background: #eeeeee;
-  background-image: radial-gradient(#cccccc 0.7px, transparent 0.7px);
-  background-size: 14px 14px;
+  background-color: #ffffff;
+  background-image: repeating-conic-gradient(#111111 0 25%, #ffffff 0 50%);
+  background-size: 56px 56px;
 }
 
 .construction-frame {
   width: min(100%, 1080px);
-  height: 100%;
+  height: calc(100% - 1rem);
   min-height: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 2px solid #111111;
   background: #ffffff;
-  box-shadow: 12px 12px 0 #111111;
+  box-shadow: none;
 }
 
-.frame-footer {
-  display: flex;
-  align-items: center;
-  min-height: 3.75rem;
-  padding: 0.75rem 1.5rem;
-  border-bottom: 2px solid #111111;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.frame-content { display: grid; flex: 1; min-height: 0; align-content: center; overflow-y: auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6.5rem); }
-.intro-copy { max-width: 36rem; transform: translateY(clamp(-2rem, -3vh, -0.75rem)); }
+.frame-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(0.75rem, 5%, 2.5rem); flex: 1; min-height: 0; align-items: stretch; overflow-y: auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6.5rem); }
+.intro-copy { max-width: 36rem; align-self: center; transform: translateY(clamp(-2rem, -3vh, -0.75rem)); }
 .pronunciation { margin: 0; color: #666666; font-family: var(--font-geist-mono), monospace; font-size: 0.74rem; letter-spacing: 0.03em; }
 h1 { margin: 1.3rem 0 0.6rem;font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(3.25rem, 7.5vw, 6.5rem); line-height: 0.86; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
 .bio-copy { max-width: 33rem; margin-top: 2.7rem; border-top: 1px solid #cccccc; color: #333333; font-size: 1rem; line-height: 1.75;font-family: Georgia, serif; font-weight: 400; color: #111111; }
 .bio-copy p { margin: 1.15rem 0 0; }
 
-.frame-footer { position: relative; min-height: 4.25rem; padding: 0; border-top: 2px solid #111111; border-bottom: 0; background: #111111; overflow: hidden; }
-.warning-stripes { position: absolute; inset: 0; background: repeating-linear-gradient(135deg, #ffffff 0, #ffffff 18px, #111111 18px, #111111 36px); }
+.warning-stripes { min-width: 0; min-height: 100%; background: repeating-linear-gradient(135deg, #ffffff 0, #ffffff 18px, #111111 18px, #111111 36px); }
 
 @media (max-width: 700px) {
   .site-page { padding: 0.75rem 0.6rem; }
-  .construction-frame { box-shadow: 6px 6px 0 #111111; }
-  .frame-content { padding: 1.5rem 1.25rem; }
+  .frame-content { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
   h1 { font-size: clamp(2.5rem, 11.5vw, 4.25rem); }
   .bio-copy { margin-top: 1.5rem; font-size: 0.9rem; line-height: 1.55; }
   .bio-copy p { margin-top: 0.9rem; }
-  .frame-footer { min-height: 3rem; }
+  .warning-stripes { min-height: 3rem; }
 }
 /*
 .hero-name {
