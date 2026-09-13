@@ -17,7 +17,6 @@
   src: url('/fonts/CanelaCondensed-RegularItalic-Trial.otf') format('opentype');
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
 }*/
 
 @media (prefers-color-scheme: dark) {
@@ -41,8 +40,10 @@ body {
   display: grid;
   place-items: center;
   background-color: #ffffff;
-  background-image: repeating-conic-gradient(#111111 0 25%, #ffffff 0 50%);
-  background-size: 56px 56px;
+  background-image: repeating-conic-gradient(#111111 0 25%, transparent 0 50%), url('/greekbg.webp');
+  background-position: center;
+  background-size: 56px 56px, cover;
+  background-repeat: repeat, no-repeat;
 }
 
 .construction-frame {
