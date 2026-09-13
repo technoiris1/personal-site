@@ -18,7 +18,6 @@ export default function Home() {
                 If you&apos;re a teen, JOIN HACK CLUB. <Link href="https://hackclub.com">hackclub.com.</Link> </p>
             </div>
           </section>
-          <div className="warning-stripes" aria-hidden="true" />
         </div>
       </div>
     </main>

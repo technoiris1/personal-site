@@ -30,15 +30,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
 }
 
 .site-page {
   box-sizing: border-box;
-  min-height: 100dvh;
-  padding: clamp(0.75rem, 3vw, 2.5rem);
+  height: 100dvh;
+  min-height: 0;
+  padding: clamp(0.6rem, 3vw, 2.5rem);
   display: grid;
   place-items: center;
+  overflow: hidden;
   background-color: #ffffff;
   background-image: repeating-conic-gradient(#111111 0 25%, transparent 0 50%), url('/greekbg.webp');
   background-position: center;
@@ -48,32 +54,29 @@ body {
 
 .construction-frame {
   width: min(100%, 1080px);
-  min-height: calc(100dvh - 5rem);
+  height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   border: 2px solid #111111;
   background: #ffffff;
   box-shadow: none;
 }
 
-.frame-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(0.75rem, 5%, 2.5rem); flex: 1; align-items: stretch; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6.5rem); background: #E4C798;}
-.intro-copy { max-width: 36rem; align-self: center; transform: translateY(clamp(-2rem, -3vh, -0.75rem)); }
+.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; min-height: 0; align-items: center; overflow: hidden; padding: clamp(1rem, 5vh, 4rem) clamp(1rem, 7vw, 6.5rem); background: #E4C798;}
+.intro-copy { max-width: 36rem; max-height: 100%; overflow: hidden; }
 .pronunciation { margin: 0; color: #666666; font-family: var(--font-geist-mono), monospace; font-size: 0.74rem; letter-spacing: 0.03em; }
-h1 { margin: 1.3rem 0 0.6rem;font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(2.45rem, 5.625vw, 4.875rem); line-height: 0.86; }
+h1 { margin: clamp(0.5rem, 2vh, 1.3rem) 0 clamp(0.3rem, 1vh, 0.6rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.86; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
-.bio-copy { max-width: 33rem; margin-top: 0.9rem; color: #111111; font-size: 1rem; line-height: 1.75;font-family: Georgia, serif; font-weight: 400; }
-.bio-copy p { margin: 1.15rem 0 0; }
-
-.warning-stripes { min-width: 0; min-height: 100%; background: repeating-linear-gradient(135deg, #ffffff 0, #ffffff 18px, #111111 18px, #111111 36px); }
+.bio-copy { max-width: 33rem; margin-top: clamp(0.35rem, 1.5vh, 0.9rem); color: #111111; font-size: clamp(0.68rem, 1.25vw, 1rem); line-height: clamp(1.2, 1.5, 1.75);font-family: Georgia, serif; font-weight: 400; }
+.bio-copy p { margin: clamp(0.35rem, 1.5vh, 1.15rem) 0 0; }
 
 @media (max-width: 700px) {
-  .site-page { padding: 0.75rem 0.6rem; }
-  .frame-content { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
-  .construction-frame { min-height: calc(100dvh - 1.5rem); }
-  h1 { font-size: clamp(1.875rem, 8.625vw, 3.1875rem); }
-  .bio-copy { margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.55; }
-  .bio-copy p { margin-top: 0.9rem; }
-  .warning-stripes { min-height: 3rem; }
+  .site-page { padding: 0.6rem; }
+  .frame-content { padding: clamp(0.75rem, 4vh, 1.5rem) clamp(0.75rem, 5vw, 1.25rem); }
+  h1 { font-size: clamp(1.5rem, 8.625vw, 3.1875rem); }
+  .bio-copy { font-size: clamp(0.64rem, 2.3vw, 0.9rem); line-height: 1.35; }
 }
 /*
 .hero-name {
