@@ -31,12 +31,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .site-page {
   box-sizing: border-box;
-  height: 100dvh;
+  min-height: 100dvh;
   padding: clamp(0.75rem, 3vw, 2.5rem);
   display: grid;
   place-items: center;
@@ -47,22 +47,20 @@ body {
 
 .construction-frame {
   width: min(100%, 1080px);
-  height: calc(100% - 1rem);
-  min-height: 0;
+  min-height: calc(100dvh - 5rem);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   border: 2px solid #111111;
   background: #ffffff;
   box-shadow: none;
 }
 
-.frame-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(0.75rem, 5%, 2.5rem); flex: 1; min-height: 0; align-items: stretch; overflow-y: auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6.5rem); }
+.frame-content { display: grid; grid-template-columns: minmax(0, 1fr) clamp(0.75rem, 5%, 2.5rem); flex: 1; align-items: stretch; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6.5rem); }
 .intro-copy { max-width: 36rem; align-self: center; transform: translateY(clamp(-2rem, -3vh, -0.75rem)); }
 .pronunciation { margin: 0; color: #666666; font-family: var(--font-geist-mono), monospace; font-size: 0.74rem; letter-spacing: 0.03em; }
-h1 { margin: 1.3rem 0 0.6rem;font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(3.25rem, 7.5vw, 6.5rem); line-height: 0.86; }
+h1 { margin: 1.3rem 0 0.6rem;font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(2.45rem, 5.625vw, 4.875rem); line-height: 0.86; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
-.bio-copy { max-width: 33rem; margin-top: 2.7rem; border-top: 1px solid #cccccc; color: #333333; font-size: 1rem; line-height: 1.75;font-family: Georgia, serif; font-weight: 400; color: #111111; }
+.bio-copy { max-width: 33rem; margin-top: 0.9rem; color: #111111; font-size: 1rem; line-height: 1.75;font-family: Georgia, serif; font-weight: 400; }
 .bio-copy p { margin: 1.15rem 0 0; }
 
 .warning-stripes { min-width: 0; min-height: 100%; background: repeating-linear-gradient(135deg, #ffffff 0, #ffffff 18px, #111111 18px, #111111 36px); }
@@ -70,8 +68,9 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
 @media (max-width: 700px) {
   .site-page { padding: 0.75rem 0.6rem; }
   .frame-content { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
-  h1 { font-size: clamp(2.5rem, 11.5vw, 4.25rem); }
-  .bio-copy { margin-top: 1.5rem; font-size: 0.9rem; line-height: 1.55; }
+  .construction-frame { min-height: calc(100dvh - 1.5rem); }
+  h1 { font-size: clamp(1.875rem, 8.625vw, 3.1875rem); }
+  .bio-copy { margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.55; }
   .bio-copy p { margin-top: 0.9rem; }
   .warning-stripes { min-height: 3rem; }
 }
