@@ -54,8 +54,7 @@ html {
 
 .construction-frame {
   width: min(100%, 1080px);
-  height: 100%;
-  min-height: 0;
+  height: auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -64,7 +63,7 @@ html {
   box-shadow: none;
 }
 
-.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; min-height: 0; align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) clamp(1.25rem, 8vw, 7rem); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
+.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) clamp(1.25rem, 8vw, 7rem); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
 .intro-copy { width: min(100%, 41rem); max-height: 100%; overflow: hidden; }
 .pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #666666; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
 h1 { margin: 0 0 clamp(0.9rem, 2vh, 1.25rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.9; }
