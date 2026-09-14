@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 
 export default function Home() {
@@ -17,6 +18,21 @@ export default function Home() {
                 <p>
                 If you&apos;re a teen, JOIN HACK CLUB. <Link href="https://hackclub.com">hackclub.com.</Link> </p>
             </div>
+            <nav className="social-links" aria-label="Social links">
+              <Link href="https://github.com/technoiris1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub aria-hidden="true" />
+              </Link>
+              <Link href="https://www.instagram.com/technoiris1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram aria-hidden="true" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/manan-sharma-434091281/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin aria-hidden="true" />
+              </Link>
+              <Link href="mailto:manan@hackclub.com" aria-label="Email">
+                <FaEnvelope aria-hidden="true" />
+              </Link>
+            </nav>
+
           </section>
         </div>
       </div>

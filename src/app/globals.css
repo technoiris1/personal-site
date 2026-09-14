@@ -64,19 +64,26 @@ html {
   box-shadow: none;
 }
 
-.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; min-height: 0; align-items: center; overflow: hidden; padding: clamp(1rem, 5vh, 4rem) clamp(1rem, 7vw, 6.5rem); background: #E4C798;}
-.intro-copy { max-width: 36rem; max-height: 100%; overflow: hidden; }
-.pronunciation { margin: 0; color: #666666; font-family: var(--font-geist-mono), monospace; font-size: 0.74rem; letter-spacing: 0.03em; }
-h1 { margin: clamp(0.5rem, 2vh, 1.3rem) 0 clamp(0.3rem, 1vh, 0.6rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.86; }
+.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; min-height: 0; align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) clamp(1.25rem, 8vw, 7rem); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
+.intro-copy { width: min(100%, 41rem); max-height: 100%; overflow: hidden; }
+.pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #666666; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
+h1 { margin: 0 0 clamp(0.9rem, 2vh, 1.25rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.9; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
-.bio-copy { max-width: 33rem; margin-top: clamp(0.35rem, 1.5vh, 0.9rem); color: #111111; font-size: clamp(0.68rem, 1.25vw, 1rem); line-height: clamp(1.2, 1.5, 1.75);font-family: Georgia, serif; font-weight: 400; }
-.bio-copy p { margin: clamp(0.35rem, 1.5vh, 1.15rem) 0 0; }
+.bio-copy { max-width: 38rem; margin-top: clamp(0.75rem, 2vh, 1.25rem); color: #111111; font-size: clamp(0.75rem, 1.35vw, 1.05rem); line-height: 1.6;font-family: Georgia, serif; font-weight: 400; }
+.bio-copy p { margin: clamp(0.9rem, 2.5vh, 1.5rem) 0 0; }
+.social-links { display: flex; gap: 1.25rem; max-width: 38rem; margin-top: clamp(1.25rem, 3vh, 2rem); }
+.social-links a { display: inline-flex; padding: 0.15rem; color: #111111; text-decoration: none; transition: color 150ms ease, transform 150ms ease; }
+.social-links svg { width: 2rem; height: 2rem; }
+.social-links a:hover, .social-links a:focus-visible { color: #666666; }
 
 @media (max-width: 700px) {
   .site-page { padding: 0.6rem; }
-  .frame-content { padding: clamp(0.75rem, 4vh, 1.5rem) clamp(0.75rem, 5vw, 1.25rem); }
+  .frame-content { padding: clamp(0.8rem, 5vh, 2rem) clamp(0.9rem, 6vw, 1.5rem); }
   h1 { font-size: clamp(1.5rem, 8.625vw, 3.1875rem); }
-  .bio-copy { font-size: clamp(0.64rem, 2.3vw, 0.9rem); line-height: 1.35; }
+  .pronunciation { margin-bottom: clamp(0.85rem, 2vh, 1.1rem); }
+  .bio-copy { margin-top: clamp(0.7rem, 1.5vh, 1rem); font-size: clamp(0.72rem, 2.5vw, 0.95rem); line-height: 1.45; }
+  .bio-copy p { margin-top: clamp(0.85rem, 2vh, 1.15rem); }
+  .social-links { gap: 1rem; margin-top: clamp(1rem, 2.5vh, 1.5rem); }
 }
 /*
 .hero-name {
