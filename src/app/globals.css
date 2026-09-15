@@ -65,7 +65,7 @@ html {
 
 .frame-content { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) clamp(1.25rem, 8vw, 7rem); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
 .intro-copy { width: min(100%, 41rem); max-height: 100%; overflow: hidden; }
-.pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #666666; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
+.pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #8a1c0c; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
 h1 { margin: 0 0 clamp(0.9rem, 2vh, 1.25rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.9; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
 .bio-copy { max-width: 38rem; margin-top: clamp(0.75rem, 2vh, 1.25rem); color: #111111; font-size: clamp(0.75rem, 1.35vw, 1.05rem); line-height: 1.6;font-family: Georgia, serif; font-weight: 400; }
@@ -73,7 +73,7 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
 .social-links { display: flex; gap: 1.25rem; max-width: 38rem; margin-top: clamp(1.25rem, 3vh, 2rem); }
 .social-links a { display: inline-flex; padding: 0.15rem; color: #111111; text-decoration: none; transition: color 150ms ease, transform 150ms ease; }
 .social-links svg { width: 2rem; height: 2rem; }
-.social-links a:hover, .social-links a:focus-visible { color: #666666; }
+.social-links a:hover, .social-links a:focus-visible { color: #8a1c0c; }
 
 @media (max-width: 700px) {
   .site-page { padding: 0.6rem; }
