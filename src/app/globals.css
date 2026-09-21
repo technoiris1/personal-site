@@ -27,7 +27,8 @@
 }
 
 body {
-  background: var(--background);
+  min-height: 100dvh;
+  background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
@@ -39,8 +40,9 @@ html {
 
 .site-page {
   box-sizing: border-box;
-  height: 100dvh;
+  flex: 1;
   min-height: 0;
+  height: auto;
   padding: clamp(0.6rem, 3vw, 2.5rem);
   display: grid;
   place-items: center;
