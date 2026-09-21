@@ -20,15 +20,12 @@ export default function SiteHome() {
               <p>ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger </p>
               <p>ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger </p>
               <p>
-                If you&apos;re a teen, JOIN HACK CLUB. <Link href="https://hackclub.com" className="text-[#8a1c0c] hover:underline">hackclub.com.</Link>
+                If you&apos;re a teen, JOIN HACK CLUB. <Link href="https://hackclub.com" className="text-[#8a1c0c] hover:underline" target="_blank">hackclub.com.</Link>
               </p>
             </div>
             <nav className="social-links" aria-label="Social links">
               <Link href="https://github.com/technoiris1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FaGithub aria-hidden="true" />
-              </Link>
-              <Link href="https://www.instagram.com/technoiris1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram aria-hidden="true" />
               </Link>
               <Link href="https://www.linkedin.com/in/manan-sharma-434091281/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedin aria-hidden="true" />
