@@ -7,10 +7,16 @@ export default function Home() {
     <main className="site-page">
       <div className="construction-frame">
         <div className="frame-content">
-          <section className="intro-copy" aria-labelledby="intro-title">
+          <nav className="site-nav" aria-label="Main navigation">
+            <Link href="#home">Home</Link>
+            <Link href="#things">Things</Link>
+            <Link href="/blogs/overglade.md">Blog</Link>
+            <Link href="mailto:manan@hackclub.com">Contact</Link>
+          </nav>
+          <section id="home" className="intro-copy" aria-labelledby="intro-title">
             <h1 id="intro-title">Heyo!<br /><em>I&apos;m Manan</em></h1>
             <p className="pronunciation font-[#8a1c0c]">{"//muh-nun//"}</p>
-            <div className="bio-copy">
+            <div id="things" className="bio-copy">
               <p>ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger</p>
                 <p>ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger </p>
                 <p>ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger ich bin ein heidelberger </p>

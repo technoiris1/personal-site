@@ -63,7 +63,43 @@ html {
   box-shadow: none;
 }
 
-.frame-content { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) clamp(1.25rem, 8vw, 7rem); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
+.site-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(1.25rem, 3vh, 2.5rem);
+  width: 25%;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 2.5vw, 2.25rem);
+  border-left: 6px solid #111111;
+  background: #f6daad;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.site-nav a {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0;
+  color: #111111;
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: #8a1c0c;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.frame-content { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) calc(clamp(1.25rem, 8vw, 7rem) + 25%); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
 .intro-copy { width: min(100%, 41rem); max-height: 100%; overflow: hidden; }
 .pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #8a1c0c; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
 h1 { margin: 0 0 clamp(0.9rem, 2vh, 1.25rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.9; }
@@ -77,7 +113,8 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
 
 @media (max-width: 700px) {
   .site-page { padding: 0.6rem; }
-  .frame-content { padding: clamp(0.8rem, 5vh, 2rem) clamp(0.9rem, 6vw, 1.5rem); }
+  .site-nav { width: 28%; padding-inline: 0.75rem; border-left-width: 4px; }
+  .frame-content { padding: clamp(0.8rem, 5vh, 2rem) calc(1.5rem + 28%) clamp(0.8rem, 5vh, 2rem) clamp(0.9rem, 6vw, 1.5rem); }
   h1 { font-size: clamp(1.5rem, 8.625vw, 3.1875rem); }
   .pronunciation { margin-bottom: clamp(0.85rem, 2vh, 1.1rem); }
   .bio-copy { margin-top: clamp(0.7rem, 1.5vh, 1rem); font-size: clamp(0.72rem, 2.5vw, 0.95rem); line-height: 1.45; }
