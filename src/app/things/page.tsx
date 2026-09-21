@@ -1,5 +1,5 @@
-import SiteHome from "../components/site-home";
+import Things from "@/app/components/things";
 
-export default function Things() {
-  return <SiteHome />;
+export default function ThingsPage() {
+  return <Things />;
 }

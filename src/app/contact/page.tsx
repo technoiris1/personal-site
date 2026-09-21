@@ -1,5 +1,5 @@
-import SiteHome from "../components/site-home";
+import Contact from "@/app/components/contacts";
 
-export default function Contact() {
-  return <SiteHome />;
+export default function ContactPage() {
+  return <Contact />;
 }

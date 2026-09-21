@@ -1,5 +1,5 @@
-import SiteHome from "../components/site-home";
+import Blogs from "@/app/components/blognew";
 
-export default function Blog() {
-  return <SiteHome />;
+export default function BlogPage() {
+  return <Blogs />;
 }
