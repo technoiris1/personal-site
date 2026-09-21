@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaLastfm } from "react-icons/fa";
 
 
 export default function Home() {
@@ -36,6 +36,9 @@ export default function Home() {
               </Link>
               <Link href="mailto:manan@hackclub.com" aria-label="Email">
                 <FaEnvelope aria-hidden="true" />
+              </Link>
+              <Link href="https://www.last.fm/user/sharmamanan190" target="_blank" rel="noopener noreferrer" aria-label="Last.fm">
+                <FaLastfm aria-hidden="true" />
               </Link>
             </nav>
 
