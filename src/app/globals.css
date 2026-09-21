@@ -75,7 +75,7 @@ html {
   justify-content: flex-start;
   align-items: stretch;
   gap: clamp(1.25rem, 3vh, 2.5rem);
-  width: 25%;
+  width: 22%;
   padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 2.5vw, 2.25rem);
   border-left: 6px solid #111111;
   background: #f6daad;
@@ -101,14 +101,14 @@ html {
   text-underline-offset: 0.2em;
 }
 
-.frame-content { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(1.25rem, 8vh, 5rem) calc(clamp(1.25rem, 8vw, 7rem) + 25%); padding-inline-start: clamp(1.25rem, 4vw, 4rem); background: #E4C798;}
-.intro-copy { width: min(100%, 41rem); max-height: 100%; overflow: hidden; }
+.frame-content { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; overflow: hidden; padding: clamp(2rem, 6vh, 3.5rem) calc(clamp(1.25rem, 8vw, 7rem) + 22%); padding-inline-start: clamp(1.75rem, 4vw, 4rem); background: #E4C798;}
+.intro-copy { width: min(100%, 44rem); max-height: 100%; overflow: hidden; }
 .pronunciation { margin: 0 0 clamp(1rem, 2.5vh, 1.5rem); color: #8a1c0c; font-family: var(--font-geist-mono), monospace; font-size: clamp(0.7rem, 1vw, 0.8rem); letter-spacing: 0.03em; }
-h1 { margin: 0 0 clamp(0.9rem, 2vh, 1.25rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 5.625vw, 4.875rem); line-height: 0.9; }
+h1 { margin: 0 0 clamp(1.25rem, 3vh, 1.75rem);font-family: Georgia, serif; font-weight: 400; color: #111111; font-size: clamp(1.8rem, 4.5vw, 3.75rem); line-height: 0.9; }
 h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; }
-.bio-copy { max-width: 38rem; margin-top: clamp(0.75rem, 2vh, 1.25rem); color: #111111; font-size: clamp(0.75rem, 1.35vw, 1.05rem); line-height: 1.6;font-family: Georgia, serif; font-weight: 400; }
+.bio-copy { max-width: 43rem; margin-top: clamp(0.75rem, 2vh, 1.25rem); color: #111111; font-size: clamp(0.75rem, 1.35vw, 1.05rem); line-height: 1.6;font-family: Georgia, serif; font-weight: 400; }
 .bio-copy p { margin: clamp(0.9rem, 2.5vh, 1.5rem) 0 0; }
-.social-links { display: flex; gap: 1.25rem; max-width: 38rem; margin-top: clamp(1.25rem, 3vh, 2rem); }
+.social-links { display: flex; gap: 1.25rem; max-width: 43rem; margin-top: clamp(1.25rem, 3vh, 2rem); }
 .social-links a { display: inline-flex; padding: 0.15rem; color: #111111; text-decoration: none; transition: color 150ms ease, transform 150ms ease; }
 .social-links svg { width: 2rem; height: 2rem; }
 .social-links a:hover, .social-links a:focus-visible { color: #8a1c0c; }
@@ -137,14 +137,14 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
     white-space: nowrap;
   }
   .frame-content {
-    padding: clamp(5.5rem, 14vw, 8rem) clamp(1.25rem, 8vw, 7rem) clamp(1.25rem, 8vh, 5rem);
-    padding-inline-start: clamp(1.25rem, 4vw, 4rem);
+    padding: clamp(5rem, 12vw, 7rem) clamp(1.25rem, 8vw, 7rem) clamp(2rem, 10vh, 6.5rem);
+    padding-inline-start: clamp(1.75rem, 4vw, 4rem);
   }
 }
 
 @media (max-width: 700px) {
   .site-page { padding: 0.6rem; }
-  h1 { font-size: clamp(1.5rem, 8.625vw, 3.1875rem); }
+  h1 { font-size: clamp(1.4rem, 7vw, 2.75rem); }
   .pronunciation { margin-bottom: clamp(0.85rem, 2vh, 1.1rem); }
   .bio-copy { margin-top: clamp(0.7rem, 1.5vh, 1rem); font-size: clamp(0.72rem, 2.5vw, 0.95rem); line-height: 1.45; }
   .bio-copy p { margin-top: clamp(0.85rem, 2vh, 1.15rem); }
