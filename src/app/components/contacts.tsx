@@ -9,7 +9,7 @@ export default function Things() {
           <nav className="site-nav" aria-label="Main navigation">
             <Link href="/">Home</Link>
             <Link href="/things">Things</Link>
-            <Link href="/blog">Blog</Link>
+            <Link href="/journal">Journal</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <section id="home" className="intro-copy" aria-labelledby="intro-title">

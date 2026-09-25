@@ -114,6 +114,32 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
 .social-links svg { width: 2rem; height: 2rem; }
 .social-links a:hover, .social-links a:focus-visible { color: #8a1c0c; }
 
+.blog-content { justify-content: flex-start; overflow: hidden; padding: clamp(2rem, 5vh, 4rem) calc(clamp(1.25rem, 8vw, 7rem) + 22%) clamp(2rem, 5vh, 4rem) clamp(1.75rem, 4vw, 4rem); transition: padding-right 600ms cubic-bezier(0.22, 1, 0.36, 1); }
+.blog-frame.is-reading .blog-content { padding-right: clamp(1.75rem, 4vw, 4rem); }
+.blog-sidebar { z-index: 2; transform: translateX(0); transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), opacity 250ms ease 350ms; }
+.blog-frame.is-reading .blog-sidebar { transform: translateX(calc(100% + 8px)); opacity: 0; pointer-events: none; }
+.blog-panel { display: flex; width: 100%; min-height: 0; flex: 1; flex-direction: column; }
+.blog-panel > h1 { flex: none; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.25rem; overflow-y: auto; padding: 0.25rem 0.35rem 1rem 0.25rem; scrollbar-color: #8a1c0c #f6daad; scrollbar-width: thin; }
+.blog-grid::-webkit-scrollbar, .markdown-content::-webkit-scrollbar { width: 0.65rem; }
+.blog-grid::-webkit-scrollbar-track, .markdown-content::-webkit-scrollbar-track { background: #f6daad; border-left: 2px solid #111111; }
+.blog-grid::-webkit-scrollbar-thumb, .markdown-content::-webkit-scrollbar-thumb { border: 2px solid #f6daad; background: #8a1c0c; }
+.blog-grid::-webkit-scrollbar-thumb:hover, .markdown-content::-webkit-scrollbar-thumb:hover { background: #651307; }
+.blog-card { display: flex; min-height: 13rem; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.5rem; border: 3px solid #111111; background: #f6daad; box-shadow: 6px 6px 0 #111111; color: #111111; text-align: left; font-family: Georgia, serif; cursor: pointer; }
+.blog-card:hover, .blog-card:focus-visible { background: #efd09b; outline: none; }
+.blog-card-title { font-size: clamp(1.35rem, 2.6vw, 2rem); line-height: 1; }
+.blog-card-description { font-size: 0.95rem; line-height: 1.5; }
+.blog-card-link { color: #8a1c0c; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.blog-article { display: flex; min-height: 0; flex: 1; flex-direction: column; }
+.back-button { display: grid; width: 2.75rem; height: 2.75rem; flex: none; place-items: center; margin: 0 0 1.25rem; border: 3px solid #111111; background: #f6daad; color: #111111; font-family: Georgia, serif; font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.back-button:hover, .back-button:focus-visible { background: #efd09b; outline: none; }
+.blog-article-header { flex: none; border-bottom: 2px solid #111111; margin-bottom: 1.5rem; }
+.blog-article-header h1 { margin-bottom: 1rem; }
+.blog-article-header p { margin: 0 0 1.5rem; font-family: Georgia, serif; font-size: 1rem; line-height: 1.6; }
+.markdown-content { min-height: 0; overflow-y: auto; padding-right: 0.5rem; color: #111111; font-family: Georgia, serif; scrollbar-color: #8a1c0c #f6daad; scrollbar-width: thin; }
+.markdown-content h1, .markdown-content h2, .markdown-content h3 { font-family: Georgia, serif; }
+.markdown-content a { color: #8a1c0c; text-decoration: underline; text-underline-offset: 0.15em; }
+
 @media (max-width: 1024px) {
   .site-page { padding: 0.6rem; }
   .site-nav {
@@ -141,6 +167,7 @@ h1 em { display: inline-block; color: #111111; font-family: Georgia, serif; font
     padding: clamp(5rem, 12vw, 7rem) clamp(1.25rem, 8vw, 7rem) clamp(2rem, 10vh, 6.5rem);
     padding-inline-start: clamp(1.75rem, 4vw, 4rem);
   }
+  .blog-content { padding: 5rem clamp(1rem, 5vw, 3rem) 2rem; }
 }
 
 @media (max-width: 700px) {

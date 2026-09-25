@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { serialize } from "next-mdx-remote/serialize";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import BlogClient from "./blog-client";
+import type { BlogPost as ClientBlogPost } from "./blognew";
 
 type BlogProps = {
     className?: string;
@@ -89,5 +90,12 @@ export default async function Blog({ className = "" }: BlogProps) {
         }),
     );
 
-    return <BlogClient className={className} posts={hydratedPosts} />;
+    const clientPosts: ClientBlogPost[] = hydratedPosts.map((post) => ({
+        slug: post.title.toLowerCase().replace(/\s+/g, "-"),
+        title: post.title,
+        description: post.excerpt?.trim() || post.computedExcerpt,
+        source: post.mdxSource,
+    }));
+
+    return <BlogClient className={className} posts={clientPosts} />;
 }
